@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: cougarbot
+    relative_path: cougarbot.urdf
+  SRDF:
+    relative_path: config/cougarbot.srdf
+  CONFIG:
+    author_name: Prof.Jong Mi n Lee
+    author_email: nobody@nodody.com
+    generated_timestamp: 1485085149

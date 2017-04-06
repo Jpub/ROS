@@ -1,0 +1,20 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"base_link" [label="base_link"];
+"torso" [label="torso"];
+"upper_arm" [label="upper_arm"];
+"lower_arm" [label="lower_arm"];
+"hand" [label="hand"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "fixed" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"fixed" -> "base_link"
+"base_link" -> "hip" [label="xyz: 0 0 0.05 \nrpy: 0 -0 0"]
+"hip" -> "torso"
+"torso" -> "shoulder" [label="xyz: 0 -0.1 0.45 \nrpy: 3.14159 1.57079 3.14159"]
+"shoulder" -> "upper_arm"
+"upper_arm" -> "elbow" [label="xyz: 0 0.1 0.35 \nrpy: 0 -0 0"]
+"elbow" -> "lower_arm"
+"lower_arm" -> "wrist" [label="xyz: 0 0 0.425 \nrpy: 0 -0 0"]
+"wrist" -> "hand"
+}
